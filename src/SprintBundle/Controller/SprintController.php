@@ -32,9 +32,7 @@ class SprintController extends AbstractSprintController
         $duration = $sprint->getDay() * 86400;
         ;
         
-//         if($this->getData("user")) {
-//             echo "Oui";
-//         }
+
         
         
         return $this->render("@SprintBundle/Resources/views/sprint.html.twig", [

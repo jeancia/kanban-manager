@@ -3,20 +3,18 @@
 {%  block title %} - Home {% endblock %}
 
 {% block section %}
-	<section>
+
 		<h1>Sprint.io</h1>
-		<p>Run your Sprint</p>
+		<p><a href="{{path('sprint')}}">
+	Run your sprint</a></p>
 	{% if global_access %}
 		<h1><a href="{{ path('sprint') }}">Sprint</a></h1>
 	{% else %}
 		<h1><a href="{{ path('auth') }}">Sign in</a></h1>
-		<h1><a href="{{ path('join') }}">Sign up</a></h1>
 	{% endif %}
-	</section>
+
 	
+	<p>Sprint manager in a Kanban Board</p>
 	
 {% endblock %}
 
-{% block footer %}
-	<p>Sprint manager in a Kanban Board</p>
-{% endblock %}

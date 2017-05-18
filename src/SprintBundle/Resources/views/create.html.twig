@@ -2,15 +2,15 @@
 
 {% block section %}
 
-<a href="{{ path('homepage') }}">
-	<img src="{{ asset('image/logo.gif') }}" alt="Sprint.io" />
+
+<a href="{{path('homepage')}}">
+<img src="{{ asset('image/logo.gif') }}" alt="sprint.io" />
 </a>
 
-<h1>Create a sprint</h1>
 
-{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
-{{ form_widget(form) }}
-{{ form_end(form) }}
+    <div>{{form_start(form,  {'attr': {'novalidate': 'novalidate'}}) }}</div>
+    <div>{{form_widget (form) }}</div>
+    <div>{{form_end(form)}}</div>
 
 {% endblock %}
 

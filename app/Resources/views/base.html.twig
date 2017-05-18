@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>Sprint.io{% block title %}Welcome!{% endblock %}</title>
+        <title>Sprint.io{% block title %}{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
          <link rel="stylesheet" type="text/css" href="{{ asset('node_modules/bootstrap/dist/css/bootstrap.css') }}" />
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
@@ -15,16 +15,15 @@
     		{% block navigation %}{% endblock%}
     	</nav>
     	
-    	<section class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-4>
+    	<section class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-4">
     	{% block section %}{% endblock %}
     	</section>
     	
-    	<footer class="col-xs-6 col-xs-offset-3>
+    	<footer class="col-xs-6 col-xs-offset-3">
     		{% block footer %}{% endblock %}
     	</footer>	
     	
     	
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
     </body>
 </html>

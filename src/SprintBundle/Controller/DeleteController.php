@@ -23,7 +23,9 @@ class DeleteController extends AbstractSprintController
         } else if (!$this->hasScrumMasterAccess() 
             || !$this->hasSprintAccess()) {
             return $this->redirectToSprint();
-        }
+        } else {
+            $sprint = $this->readSprint();
+        
         
         
         
@@ -51,6 +53,10 @@ class DeleteController extends AbstractSprintController
         $this->session->remove("sprint");
         $this->session->remove("master");
         return $this->redirectToCreate();
+        return $this->render(
+            '@SprintBundle/Resources/views/create.html.twig', [
+                "form"=> $form->createView(),
+            ]);
         
         
 //          $user = $sprint->getUser();
@@ -59,7 +65,7 @@ class DeleteController extends AbstractSprintController
         
 
        
-        
+        }
         
         
     }
