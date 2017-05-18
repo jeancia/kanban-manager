@@ -1,12 +1,14 @@
 #kanban manager
 
 kanban manager is a simple application for sprint  
+
+kanban manager sert a follow evolution to sprint
  
 
 #How to use : 
 
 create a new session and a new sprint, 
-the load bar evolute nwhile the sprint
+the load bar evolute while the sprint
 
 
 
