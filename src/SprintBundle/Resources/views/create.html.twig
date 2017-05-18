@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block section %}
+
+<a href="{{ path('homepage') }}">
+	<img src="{{ asset('image/logo.gif') }}" alt="Sprint.io" />
+</a>
+
+<h1>Create a sprint</h1>
+
+{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+{{ form_widget(form) }}
+{{ form_end(form) }}
+
+{% endblock %}
+
+

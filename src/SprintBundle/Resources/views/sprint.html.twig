@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block section %}
+
+	<a href="{{ path('homepage') }}">
+		<img src="{{ asset('image/logo.gif') }}" alt="Sprint.io" />
+	</a>
+
+	<h1>Sprint</h1>
+	
+	{% if master_access %}
+		<a href="{{ path('delete') }}">Delete</a>
+	{% endif %}
+	
+	
+    <div><p>{{ percent }} of {{ day }} day</p></div>
+	<div><h2>{{ goal }}</h2></div>
+	<div><p>{{ description }}</p></div>
+	<p id="load"><span></span></p>
+
+{% endblock %}
+
+{% block stylesheets %}
+
+<style>
+
+#load {
+	text-align: left;
+	height: 1em;
+	color: white;
+	background: darkGrey;
+	width: 100%;
+	border-radius: 0.4em;
+	border: 1px black;
+}
+
+#load span {
+	background: green;
+	display: inline-block;
+	height: 1em;
+	width: {{ percent }}%;
+	border-radius: 0.4em;
+	border: 1px black;
+}
+
+</style>
+{% endblock %}
+
