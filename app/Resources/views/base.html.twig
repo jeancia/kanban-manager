@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Sprint.io{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+         <link rel="stylesheet" type="text/css" href="{{ asset('node_modules/bootstrap/dist/css/bootstrap.css') }}" />
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/appbundle/appbundle.css') }}" />
+   		<link rel="stylesheet" type="text/css" href="{{ asset('font/font.css') }}" />
+    </head>
+    <body>
+    	
+    	<nav class="col-xs-12" id="nav_bar">
+    		{% block navigation %}{% endblock%}
+    	</nav>
+    	
+    	<section class="col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-4>
+    	{% block section %}{% endblock %}
+    	</section>
+    	
+    	<footer class="col-xs-6 col-xs-offset-3>
+    		{% block footer %}{% endblock %}
+    	</footer>	
+    	
+    	
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
