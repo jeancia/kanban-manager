@@ -39,7 +39,7 @@ class SprintController extends AbstractSprintController
             "goal" => $sprint->getGoal(),
             "description" => $sprint->getDescription(),
             "day" => $sprint->getDay(),
-            "percent" => (round($lapsed / $sprint->getDay() * 100, 2)),
+            "percent" => (round($lapsed / $duration *9000, 2)),
             "master_access" => $this->hasScrumMasterAccess(),
         ]);
         
